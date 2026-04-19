@@ -37,7 +37,7 @@ const SkillCard = ({ authorEmail, category, createdAt, description, installComma
             <img src="/logo512.png" alt="author avatar" className="avatar" />
             <div className="author-copy"></div>
             <p>J. Doe</p>
-            <p>{new Date(createdAt as string).toLocaleDateString()}</p>
+            <p>{createdAt ? new Date(createdAt as string).toLocaleDateString() : "Unknown date"}</p>
           </div>
           <p className="category">{category}</p>
         </div>
